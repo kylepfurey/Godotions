@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bpuvnn38cxp0i" path="res://start stuff/select_screen.gd" id="1_qmw8t"]
 [ext_resource type="Texture2D" uid="uid://by6hf3lwsfkpd" path="res://start stuff/newspaper.png" id="2_hn4lf"]
+[ext_resource type="FontFile" uid="uid://gbbds13wkg3l" path="res://start stuff/Printer.ttf" id="3_ots6f"]
 
 [sub_resource type="Animation" id="Animation_hn4lf"]
 length = 0.001
@@ -70,6 +71,7 @@ _data = {
 }
 
 [sub_resource type="Theme" id="Theme_hn4lf"]
+default_font = ExtResource("3_ots6f")
 default_font_size = 143
 
 [node name="SelectScreen" type="Control" unique_id=192181342]
@@ -101,19 +103,22 @@ texture = ExtResource("2_hn4lf")
 [node name="Player1JoinText" type="RichTextLabel" parent="Player1Bg" unique_id=2072093297]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.439
-anchor_right = 0.97800004
-anchor_bottom = 0.711
-offset_left = 27.814543
-offset_top = 47.50934
-offset_right = -0.1352539
-offset_bottom = 47.75534
+anchor_left = -0.07
+anchor_top = 0.437
+anchor_right = 1.065
+anchor_bottom = 0.772
+offset_left = -0.20161057
+offset_top = -0.22354126
+offset_right = -107.90741
+offset_bottom = -40.10855
+scale = Vector2(1.23, 1.23)
 theme = SubResource("Theme_hn4lf")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 54
 bbcode_enabled = true
-text = "PRESS ANY BUTTON TO JOIN"
+text = "PRESS ANY
+BUTTON TO JOIN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -131,21 +136,25 @@ offset_bottom = 156.26208
 scale = Vector2(0.755, 0.755)
 texture = ExtResource("2_hn4lf")
 
-[node name="Player2JoinText" type="RichTextLabel" parent="Player2Bg" unique_id=1241154620]
+[node name="Player2JoinText" type="RichTextLabel" parent="Player2Bg" unique_id=615089325]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.439
-anchor_right = 0.97800004
-anchor_bottom = 0.711
-offset_left = 27.814474
-offset_top = 47.506653
-offset_right = -0.13528442
-offset_bottom = 47.752655
+anchor_left = -0.07
+anchor_top = 0.437
+anchor_right = 1.065
+anchor_bottom = 0.772
+offset_left = 3.7717934
+offset_top = -0.22601318
+offset_right = -103.93402
+offset_bottom = -40.111023
+scale = Vector2(1.23, 1.23)
 theme = SubResource("Theme_hn4lf")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 54
 bbcode_enabled = true
-text = "PRESS ANY BUTTON TO JOIN"
+text = "PRESS ANY
+BUTTON
+ TO JOIN"
 horizontal_alignment = 1
 vertical_alignment = 1
