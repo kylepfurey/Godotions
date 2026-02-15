@@ -18,10 +18,12 @@ func _input(event: InputEvent) -> void:
 		var device := event.device
 		if p1_controller == null:
 			p1_controller = device
+			PointManager.p1_controller = p1_controller
 			p1_text.text = "WELCOME PLAYER 1"
 			
 		if p2_controller == null and device != p1_controller:
 			p2_controller = device
+			PointManager.p2_controller = p2_controller
 			p2_text.text = "WELCOME PLAYER 2"
 			emit_signal("players_joined",p1_controller,p2_controller)
 	

@@ -3,6 +3,9 @@ extends Node
 var p1_points: int = 0
 var p2_points: int = 0
 
+var p1_controller = null
+var p2_controller = null
+
 signal points_changed
 
 func add_points_to_player(player: int, amount: int):
