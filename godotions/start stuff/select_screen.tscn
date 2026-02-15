@@ -30,6 +30,34 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(647.00006, 72)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tsym3"]
+resource_name = "fade_out"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(2.3784142, 1),
+"update": 0,
+"values": [Color(0.99607843, 0.99607843, 0.99607843, 0), Color(0, 0, 0, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_ots6f"]
 resource_name = "pull_up_animation"
@@ -66,6 +94,7 @@ loop_mode = 1
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pi622"]
 _data = {
 &"RESET": SubResource("Animation_hn4lf"),
+&"fade_out": SubResource("Animation_tsym3"),
 &"pull_up_animation": SubResource("Animation_ots6f"),
 &"select_text_animation": SubResource("Animation_pi622")
 }
@@ -158,3 +187,12 @@ BUTTON
  TO JOIN"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=792265606]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
