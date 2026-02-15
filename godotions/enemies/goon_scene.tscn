@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bt01kjal833is"]
+
+[ext_resource type="Script" uid="uid://csq5ayrbnkfow" path="res://enemies/enemy.gd" id="1_ou511"]
+[ext_resource type="Texture2D" uid="uid://dsa0p2xgb64il" path="res://enemies/mob_man.png" id="2_wurbs"]
+[ext_resource type="Texture2D" uid="uid://chykekr2k718g" path="res://enemies/mob_man_hit.png" id="3_0eyvs"]
+
+[node name="GoonScene" type="Node3D" unique_id=289991268]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=760188601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32649016, 4.1270857)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=583331847]
+texture = ExtResource("2_wurbs")
+script = ExtResource("1_ou511")
+idle_sprite = ExtResource("2_wurbs")
+hit_sprite = ExtResource("3_0eyvs")
+hit_message = Array[String](["ack!", "arg!"])
+death_message = Array[String](["grrr!", "Get em boss!"])
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1757086795]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5685229, 2.2912142, 0.78760195)
+font_size = 54
