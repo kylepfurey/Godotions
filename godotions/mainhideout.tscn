@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cscl8t66mu8rg"]
+
+[ext_resource type="PackedScene" uid="uid://c2x5wbkke6c4s" path="res://Player.tscn" id="1_363px"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jht0j"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xe653"]
+
+[node name="Node3D" type="Node3D" unique_id=547352567]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1269876302]
+transform = Transform3D(32.271034, 0, 0, 0, 1, 0, 0, 0, 15.967898, 0, 0, 0)
+mesh = SubResource("PlaneMesh_jht0j")
+
+[node name="Player" parent="." unique_id=565241242 instance=ExtResource("1_363px")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -30.689705, 0.02442874, 0)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=541407588]
+transform = Transform3D(64.894295, 0, 0, 0, 7.549095, 0, 0, 0, 0.13359201, 0, 3.5457392, 15.996523)
+mesh = SubResource("BoxMesh_xe653")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=2037533160]
+transform = Transform3D(64.894295, 0, 0, 0, 7.549095, 0, 0, 0, 0.13359201, 0, 3.5457392, -15.951702)
+mesh = SubResource("BoxMesh_xe653")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1055019579]
+transform = Transform3D(-1.4194119e-06, 0, -0.13359201, 0, 7.549095, 0, 32.472363, 0, -5.839492e-09, -32.19284, 3.5457392, -0.00061798096)
+mesh = SubResource("BoxMesh_xe653")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=203232761]
+transform = Transform3D(-1.4194119e-06, 0, -0.13359201, 0, 7.549095, 0, 32.472363, 0, -5.839492e-09, 32.086605, 3.5457392, -0.00061798096)
+mesh = SubResource("BoxMesh_xe653")
+skeleton = NodePath("../MeshInstance3D")

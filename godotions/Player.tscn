@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://c2x5wbkke6c4s"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0rwas"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xhfnw"]
+
+[node name="Player" type="Node3D" unique_id=565241242]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1205392833]
+transform = Transform3D(0.731725, 0, 0, 0, 0.027284801, 0, 0, 0, 0.55266786, 0, 0.14109433, 0)
+mesh = SubResource("BoxMesh_0rwas")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="." unique_id=39597217]
+transform = Transform3D(0.731725, 0, 0, 0, 0.10618406, 0, 0, 0, 0.3038071, 0, 0.077286094, -0.007807307)
+mesh = SubResource("BoxMesh_0rwas")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1445772967]
+transform = Transform3D(0.9366694, 0, 0, 0, 0.0067828926, 0.38904318, 0, -0.024306705, 0.10856425, 0, 0.32810584, 0.32080302)
+mesh = SubResource("BoxMesh_0rwas")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1710947376]
+transform = Transform3D(0.9366694, 0, 0, 0, 0.0067862887, -0.389028, 0, 0.024305755, 0.108618565, 0, 0.32810584, -0.3168307)
+mesh = SubResource("BoxMesh_0rwas")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=686778104]
+transform = Transform3D(-3.1996112e-08, 0.024305755, 0.10861858, 0, 0.0067862887, -0.38902807, -0.73198575, -1.0624382e-09, -4.7478688e-09, -0.4197528, 0.32810584, -0.0016759187)
+mesh = SubResource("BoxMesh_0rwas")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=864442739]
+transform = Transform3D(-3.1996112e-08, -0.024305755, 0.10861858, 0, 0.0067862887, 0.38902807, -0.73198575, 1.0624382e-09, -4.7478688e-09, 0.4207324, 0.32810584, -0.0016759187)
+mesh = SubResource("BoxMesh_0rwas")
+
+[node name="Wheel" type="MeshInstance3D" parent="." unique_id=851277318]
+transform = Transform3D(0.15, 0, 0, 0, -5.6824806e-10, -0.15, 0, 0.013, -6.5567085e-09, 0.29158273, 0.049433693, 0.26193866)
+mesh = SubResource("CylinderMesh_xhfnw")
+
+[node name="Wheel2" type="MeshInstance3D" parent="." unique_id=33099674]
+transform = Transform3D(0.15, 0, 0, 0, -5.6824806e-10, -0.15, 0, 0.013, -6.5567085e-09, 0.29158273, 0.049433693, -0.26173112)
+mesh = SubResource("CylinderMesh_xhfnw")
+
+[node name="Axel" type="MeshInstance3D" parent="." unique_id=847291720]
+transform = Transform3D(0.05, 0, 0, 0, -1.1011152e-08, -0.049999982, 0, 0.25190577, -2.1855684e-09, 0.29158273, 0.049433693, 0.0010115467)
+mesh = SubResource("CylinderMesh_xhfnw")
+
+[node name="Wheel3" type="MeshInstance3D" parent="." unique_id=1259146036]
+transform = Transform3D(0.15, 0, 0, 0, -5.6824806e-10, -0.15, 0, 0.013, -6.5567085e-09, -0.28793386, 0.049433693, 0.26193866)
+mesh = SubResource("CylinderMesh_xhfnw")
+
+[node name="Wheel4" type="MeshInstance3D" parent="." unique_id=2072123098]
+transform = Transform3D(0.15, 0, 0, 0, -5.6824806e-10, -0.15, 0, 0.013, -6.5567085e-09, -0.28793386, 0.049433693, -0.26173112)
+mesh = SubResource("CylinderMesh_xhfnw")
+
+[node name="Axel2" type="MeshInstance3D" parent="." unique_id=45366471]
+transform = Transform3D(0.05, 0, 0, 0, -1.1011152e-08, -0.049999982, 0, 0.25190577, -2.1855684e-09, -0.28793386, 0.049433693, 0.0010115467)
+mesh = SubResource("CylinderMesh_xhfnw")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=459848245]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.04038316, 0.7618571, 0.038154364)
