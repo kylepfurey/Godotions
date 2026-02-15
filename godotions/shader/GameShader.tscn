@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bok871uh0710x"]
+
+[ext_resource type="Shader" uid="uid://0ahrwbmiiwxa" path="res://shader/Noir3D.gdshader" id="1_5xsrb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ib1fp"]
+render_priority = 0
+shader = ExtResource("1_5xsrb")
+shader_parameter/m_monochrome = true
+shader_parameter/m_contrast = 2.0
+shader_parameter/m_steps = 8
+shader_parameter/m_size = 256
+
+[sub_resource type="QuadMesh" id="QuadMesh_wawo7"]
+
+[sub_resource type="Environment" id="Environment_5xsrb"]
+background_mode = 1
+background_energy_multiplier = 0.0
+ambient_light_source = 1
+ambient_light_energy = 0.0
+reflected_light_source = 1
+
+[node name="GameShader" type="Node3D" unique_id=2027003740]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1619137949]
+material_override = SubResource("ShaderMaterial_ib1fp")
+mesh = SubResource("QuadMesh_wawo7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="MeshInstance3D" unique_id=1144674527]
+light_color = Color(0, 0, 0, 1)
+sky_mode = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="MeshInstance3D" unique_id=2007893621]
+environment = SubResource("Environment_5xsrb")
