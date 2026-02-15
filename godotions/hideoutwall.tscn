@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://dbu02ampsa0n"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_xe653"]
-
-[node name="MeshInstance3D2" type="MeshInstance3D" unique_id=331097701]
-transform = Transform3D(64.894295, 0, 0, 0, 7.549095, 0, 0, 0, 0.13359201, 0, 0, 0)
-mesh = SubResource("BoxMesh_xe653")
-skeleton = NodePath("../MeshInstance3D")
