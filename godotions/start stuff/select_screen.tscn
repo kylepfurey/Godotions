@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://dw366qwjl3tk1"]
+
+[ext_resource type="Script" uid="uid://bpuvnn38cxp0i" path="res://start stuff/select_screen.gd" id="1_qmw8t"]
+[ext_resource type="Texture2D" uid="uid://by6hf3lwsfkpd" path="res://start stuff/newspaper.png" id="2_hn4lf"]
+
+[sub_resource type="Animation" id="Animation_hn4lf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player1Bg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(108.000015, 72.00001)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player2Bg:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(647.00006, 72)]
+}
+
+[sub_resource type="Animation" id="Animation_ots6f"]
+resource_name = "pull_up_animation"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player1Bg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(107.99999, 690), Vector2(108.000015, 72.00001)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player2Bg:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.26666668, 0.76666665),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(647, 727), Vector2(647.00006, 72)]
+}
+
+[sub_resource type="Animation" id="Animation_pi622"]
+resource_name = "select_text_animation"
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pi622"]
+_data = {
+&"RESET": SubResource("Animation_hn4lf"),
+&"pull_up_animation": SubResource("Animation_ots6f"),
+&"select_text_animation": SubResource("Animation_pi622")
+}
+
+[sub_resource type="Theme" id="Theme_hn4lf"]
+default_font_size = 143
+
+[node name="SelectScreen" type="Control" unique_id=192181342]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qmw8t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1714860289]
+libraries/ = SubResource("AnimationLibrary_pi622")
+
+[node name="Player1Bg" type="TextureRect" parent="." unique_id=607851641]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11000001
+anchor_top = 0.11100001
+anchor_right = 0.42700002
+anchor_bottom = 0.85300004
+offset_left = -18.719994
+offset_top = 0.071998596
+offset_right = 124.09598
+offset_bottom = 156.25647
+scale = Vector2(0.755, 0.755)
+texture = ExtResource("2_hn4lf")
+
+[node name="Player1JoinText" type="RichTextLabel" parent="Player1Bg" unique_id=2072093297]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.439
+anchor_right = 0.97800004
+anchor_bottom = 0.711
+offset_left = 27.814543
+offset_top = 47.50934
+offset_right = -0.1352539
+offset_bottom = 47.75534
+theme = SubResource("Theme_hn4lf")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 54
+bbcode_enabled = true
+text = "PRESS ANY BUTTONTO JOIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player2Bg" type="TextureRect" parent="." unique_id=282857272]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.56200004
+anchor_top = 0.11100001
+anchor_right = 0.89500004
+anchor_bottom = 0.85300004
+offset_left = -0.42401123
+offset_top = 0.07199097
+offset_right = 123.95996
+offset_bottom = 156.26208
+scale = Vector2(0.755, 0.755)
+texture = ExtResource("2_hn4lf")
+
+[node name="Player2JoinText" type="RichTextLabel" parent="Player2Bg" unique_id=1241154620]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.439
+anchor_right = 0.97800004
+anchor_bottom = 0.711
+offset_left = 27.814474
+offset_top = 47.506653
+offset_right = -0.13528442
+offset_bottom = 47.752655
+theme = SubResource("Theme_hn4lf")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 54
+bbcode_enabled = true
+text = "PRESS ANY BUTTON TO JOIN"
+horizontal_alignment = 1
+vertical_alignment = 1
