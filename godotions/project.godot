@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 PointManager="*uid://b0rge80trgsn4"
+Splitscreen="*uid://dn2gele14t8vx"
 
 [input]
 

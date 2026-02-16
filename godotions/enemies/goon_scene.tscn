@@ -10,6 +10,8 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32649016, 4.1270857)
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=583331847]
+transparent = false
+shaded = true
 texture = ExtResource("2_wurbs")
 script = ExtResource("1_ou511")
 idle_sprite = ExtResource("2_wurbs")
