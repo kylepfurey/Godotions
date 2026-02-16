@@ -24,6 +24,10 @@ config/icon="res://icon.svg"
 PointManager="*uid://b0rge80trgsn4"
 Splitscreen="*uid://dn2gele14t8vx"
 
+[display]
+
+window/subwindows/embed_subwindows=false
+
 [input]
 
 test_hit={
