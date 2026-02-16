@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c2x5wbkke6c4s"]
 
+[ext_resource type="PackedScene" uid="uid://bok871uh0710x" path="res://shader/GameShader.tscn" id="1_xhfnw"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_0rwas"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_xhfnw"]
@@ -56,3 +58,6 @@ mesh = SubResource("CylinderMesh_xhfnw")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=459848245]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.04038316, 0.7618571, 0.038154364)
+
+[node name="GameShader" parent="Camera3D" unique_id=2027003740 instance=ExtResource("1_xhfnw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.061067916)
