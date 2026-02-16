@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Godotions"
-run/main_scene="uid://dw366qwjl3tk1"
+run/main_scene="uid://cscl8t66mu8rg"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
