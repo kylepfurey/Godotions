@@ -12,10 +12,6 @@ var health := max_health
 @export var hit_message: Array[String]
 @export var death_message: Array[String]
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("test_hit"):
-		take_damage(3)
-
 func _process(delta: float) -> void:
 	if taking_damage:
 		this_enemey.texture = hit_sprite
