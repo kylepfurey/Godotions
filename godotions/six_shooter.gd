@@ -59,11 +59,12 @@ func shoot():
 		var to = from + camera.global_transform.basis.z * -shoot_distance
 		var physics = get_world_3d().direct_space_state
 		var result = physics.intersect_ray(PhysicsRayQueryParameters3D.create(from, to, 4294967295, [self]))
+		print(str(from) + " -> " + str(to))
 		if result:
 			var collider = result.collider
 			if collider:
+				print(str(device_id) + ".on_hit(" + collider.name + ")")
 				on_hit.emit(collider, self)
-				print(str(device_id) + ".hit(" + collider.name + ")")
 				if collider.has_method("on_hit"):
 					collider.on_hit(self)
 	else:
