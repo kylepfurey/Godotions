@@ -1,9 +1,13 @@
 extends Node
+# Splits the screen into a separate Window for Player 2.
 
 var parent_window : Window
+# Player 1's Window.
 var child_window : Window
+# Player 2's Window.
 
 func _ready():	
+	# Initializes Player 1.
 	print("Splitscreen._ready()")
 	parent_window = get_window()
 	parent_window.title = "Player 1"
@@ -11,12 +15,12 @@ func _ready():
 	parent_window.size = DisplayServer.screen_get_size()
 	parent_window.unresizable = false
 	parent_window.transient = true
-	split(Camera3D.new())
 
 func split(camera: Camera3D) -> Window:
+	# Creates Player 2.
+	print("Splitscreen.split()")
 	if child_window:
 		return child_window
-	print("Splitscreen.split()")
 	child_window = Window.new()
 	add_child(child_window)
 	child_window.show()
@@ -33,6 +37,7 @@ func split(camera: Camera3D) -> Window:
 	return child_window
 
 func combine():
+	# Destroys Player 2.
 	print("Splitscreen.combine()")
 	if is_instance_valid(child_window):
 		child_window.queue_free()
