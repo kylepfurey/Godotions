@@ -495,6 +495,6 @@ mesh = SubResource("BoxMesh_xe653")
 skeleton = NodePath("../MeshInstance3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1269876302]
-transform = Transform3D(11.3364, 0, 0, 0, 0.31796664, 0, 0, 0, 4.0155926, 0, 0, 0)
+transform = Transform3D(11.3364, 0, 0, 0, 0.31796664, 0, 0, 0, 4.0155926, -0.058182716, 0.019162416, 0.019856691)
 mesh = SubResource("PlaneMesh_jht0j")
 surface_material_override/0 = SubResource("StandardMaterial3D_j51q1")
