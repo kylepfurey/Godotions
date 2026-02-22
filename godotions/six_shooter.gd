@@ -115,8 +115,11 @@ func _process(delta):
 		return
 	var stick_x = Input.get_action_strength("look_right", device_id) - Input.get_action_strength("look_left", device_id)
 	var stick_y = Input.get_action_strength("look_down", device_id) - Input.get_action_strength("look_up", device_id)
-	stick_x = abs(stick_x) > deadzone if stick_x else 0
-	stick_y = abs(stick_y) > deadzone if stick_y else 0
+	if abs(stick_x) < deadzone:
+		stick_x = 0.0
+
+	if abs(stick_y) < deadzone:
+		stick_y = 0.0
 	if stick_x != 0 or stick_y != 0:
 		look(
 			stick_x * stick_sens_x * delta,

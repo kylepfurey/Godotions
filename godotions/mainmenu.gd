@@ -1,8 +1,5 @@
 extends Control
 
-func _on_options_pressed() -> void: #do we want options menu?
-	pass # Replace with function body.
-
 func _on_quit_pressed() -> void:
 	get_tree().quit()
 

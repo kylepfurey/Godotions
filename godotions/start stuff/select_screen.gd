@@ -24,7 +24,7 @@ func _input(event: InputEvent) -> void:
 		if p2_controller == null and device != p1_controller:
 			p2_controller = device
 			PointManager.p2_controller = p2_controller
-			p2_text.scale = 2.0
+			#p2_text.scale = 2
 			p2_text.text = "WELCOME\n PLAYER\n 2"
 			emit_signal("players_joined",p1_controller,p2_controller)
 
