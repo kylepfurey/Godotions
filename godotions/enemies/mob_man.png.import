@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsa0p2xgb64il"
 path.s3tc="res://.godot/imported/mob_man.png-2fb5239dd8e2b8b45fd871e78d7b338a.s3tc.ctex"
+path.etc2="res://.godot/imported/mob_man.png-2fb5239dd8e2b8b45fd871e78d7b338a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://enemies/mob_man.png"
-dest_files=["res://.godot/imported/mob_man.png-2fb5239dd8e2b8b45fd871e78d7b338a.s3tc.ctex"]
+dest_files=["res://.godot/imported/mob_man.png-2fb5239dd8e2b8b45fd871e78d7b338a.s3tc.ctex", "res://.godot/imported/mob_man.png-2fb5239dd8e2b8b45fd871e78d7b338a.etc2.ctex"]
 
 [params]
 

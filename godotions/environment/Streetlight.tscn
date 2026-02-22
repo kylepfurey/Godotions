@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://txtabi4rdx1l"]
+
+[ext_resource type="Material" uid="uid://bay2glbhohqn5" path="res://environment/streetlight_material.tres" id="1_8apa2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_64oxt"]
+
+[node name="Streetlight" type="Node3D" unique_id=613357298]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=932681197]
+transform = Transform3D(0.050000004, 0, 0, 0, 0.10000001, 0, 0, 0, 0.050000004, 0, 0.04991631, 0)
+mesh = SubResource("BoxMesh_64oxt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1523734993]
+transform = Transform3D(0.019, 0, 0, 0, 0.8000001, 0, 0, 0, 0.019, 0, 0.4911698, 0)
+mesh = SubResource("BoxMesh_64oxt")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1035888514]
+transform = Transform3D(0.018999998, 0, 0, 0, -0.13852382, -0.020482302, 0, 0.44705617, -0.0063466015, 0, 0.9498372, -0.2131112)
+mesh = SubResource("BoxMesh_64oxt")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=458637712]
+transform = Transform3D(0.052209876, 0, 0, 0, -0.003989176, -0.02306556, 0, 0.06661524, -0.0013812557, 0, 1.0194566, -0.46397254)
+mesh = SubResource("BoxMesh_64oxt")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=466061237]
+transform = Transform3D(0.045, 0, 0, 0, -0.0035866015, -0.020962447, 0, 0.059892707, -0.0012553106, 0, 1.0148113, -0.46397254)
+mesh = SubResource("BoxMesh_64oxt")
+surface_material_override/0 = ExtResource("1_8apa2")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="MeshInstance3D5" unique_id=1647549763]
+transform = Transform3D(7.4074063, 0, 0, 0, -5.6049347, 3.6975958, 0, -0.4887812, -15.410724, 0, 0.004289627, 0.48386002)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+spot_range = 6.172
+spot_angle = 50.85
